@@ -7,10 +7,14 @@
 .text
 
 _start:
-
-    #<assembler code here>
-   
+	la t0, v1	# load address. Mi salvo l indirizzo base
+	lw t1, 0(t0)	# copio / carico la prima parola (v1) in t1
+	lw t2, 4(t0)	# copio / carico la seconda parola (v2) in t2
+	
+	add t3, t1, t2	# eseguo la somma sfruttando il registro t3
+	
+	sw t3, 8(t0)	# salvo il risultato in memoria appena dopo v2
 
 exit:
-    addi x17, x0, 10  # call number 10 = exit
+    li a7, 10  # call number 10 = exit
     ecall

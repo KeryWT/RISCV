@@ -1,2 +1,1 @@
-# RISCV
- Architettura degli Elaboratori - RISCV
+# Architettura degli Elaboratori - RISCV

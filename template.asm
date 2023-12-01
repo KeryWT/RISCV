@@ -10,5 +10,5 @@ _start:
    
 
 exit:
-    addi x17, x0, 10  # call number 10 = exit
+    li 	a7, 10  # call number 10 = exit
     ecall
