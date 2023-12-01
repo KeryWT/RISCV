@@ -1,0 +1,40 @@
+.globl _start
+.data 
+
+ 
+.text
+
+_start:
+	li t0, 10	# A
+	li t1, 5	# B
+	li t2, 0	# R
+
+	
+	li t3, 0	# i
+fori:
+	bge t3, t0, endi
+	
+	
+	li t4, 0	# j
+forj:
+	bge t4, t1, endj
+	add t2, t2, t2 # R = 2*R
+	add t2, t2, t3 # + i
+	add t2, t2, t4 # + j
+	addi t4, t4, 1 # j++
+	j forj
+	
+
+	
+endj:
+	addi t3, t3, 1 # incremento di i, va fatto dopo aver terminato le istruzioni del for i
+	j fori
+
+endi:						
+	
+    #<assembler code here>
+   
+
+exit:
+    li a7, 10  # call number 10 = exit
+    ecall
