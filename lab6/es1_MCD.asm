@@ -35,5 +35,5 @@ else:
 	j loop
 	
 endloop:
-	jr ra
+	ret
 ################################
