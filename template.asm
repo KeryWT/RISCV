@@ -6,7 +6,11 @@
 
 _start:
 
-    #<assembler code here>
+and t0, t0, t1
+beq t0, t1, end 
+andi t0, zero, 0
+end: 
+andi t0, zero, 1
    
 
 exit:
